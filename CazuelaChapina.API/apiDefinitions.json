@@ -1,0 +1,429 @@
+[
+  {
+    "entity": "Tamale",
+    "dto": "TamaleDto",
+    "properties": [
+      "Id",
+      "TamaleType",
+      "Filling",
+      "Wrapper",
+      "SpiceLevel",
+      "Price"
+    ],
+    "routes": {
+      "getAll": "/api/Tamales",
+      "getById": "/api/Tamales/{id}",
+      "create": "/api/Tamales",
+      "update": "/api/Tamales/{id}",
+      "delete": "/api/Tamales/{id}"
+    }
+  },
+  {
+    "entity": "Beverage",
+    "dto": "BeverageDto",
+    "properties": [
+      "Id",
+      "Type",
+      "Size",
+      "Sweetener",
+      "Toppings",
+      "Price"
+    ],
+    "routes": {
+      "getAll": "/api/Beverages",
+      "getById": "/api/Beverages/{id}",
+      "create": "/api/Beverages",
+      "update": "/api/Beverages/{id}",
+      "delete": "/api/Beverages/{id}"
+    }
+  },
+  {
+    "entity": "Combo",
+    "dto": "ComboDto",
+    "properties": [
+      "Id",
+      "Name",
+      "Description",
+      "Price",
+      "IsActive",
+      "IsEditable",
+      "Season",
+      "Tamales",
+      "Beverages",
+      "Total"
+    ],
+    "routes": {
+      "getAll": "/api/Combos",
+      "getById": "/api/Combos/{id}",
+      "create": "/api/Combos",
+      "update": "/api/Combos/{id}",
+      "delete": "/api/Combos/{id}"
+    }
+  },
+  {
+    "entity": "InventoryItem",
+    "dto": "InventoryItemDto",
+    "properties": [
+      "Id",
+      "Name",
+      "Type",
+      "Stock",
+      "UnitCost",
+      "IsCritical"
+    ],
+    "routes": {
+      "getAll": "/api/Inventory",
+      "getById": "/api/Inventory/{id}",
+      "create": "/api/Inventory",
+      "update": "/api/Inventory/{id}",
+      "delete": "/api/Inventory/{id}"
+    }
+  },
+  {
+    "entity": "InventoryEntry",
+    "dto": "CreateInventoryEntryDto",
+    "properties": [
+      "Quantity",
+      "Reason"
+    ],
+    "routes": {
+      "create": "/api/Inventory/{id}/entry"
+    }
+  },
+  {
+    "entity": "InventoryExit",
+    "dto": "CreateInventoryEntryDto",
+    "properties": [
+      "Quantity",
+      "Reason"
+    ],
+    "routes": {
+      "create": "/api/Inventory/{id}/exit"
+    }
+  },
+  {
+    "entity": "InventoryWaste",
+    "dto": "CreateInventoryEntryDto",
+    "properties": [
+      "Quantity",
+      "Reason"
+    ],
+    "routes": {
+      "create": "/api/Inventory/{id}/waste"
+    }
+  },
+  {
+    "entity": "Sale",
+    "dto": "SaleDto",
+    "properties": [
+      "Id",
+      "Date",
+      "Total",
+      "PaymentMethod",
+      "User",
+      "BranchId",
+      "Items"
+    ],
+    "routes": {
+      "getAll": "/api/Sales",
+      "getById": "/api/Sales/{id}",
+      "create": "/api/Sales"
+    }
+  },
+  {
+    "entity": "SyncSale",
+    "dto": "SaleDto",
+    "properties": [
+      "Id",
+      "Date",
+      "Total",
+      "PaymentMethod",
+      "User",
+      "BranchId",
+      "Items"
+    ],
+    "routes": {
+      "create": "/api/Sync/sale"
+    }
+  },
+  {
+    "entity": "Branch",
+    "dto": "BranchDto",
+    "properties": [
+      "Id",
+      "Name",
+      "Address",
+      "Manager"
+    ],
+    "routes": {
+      "getAll": "/api/Branches",
+      "create": "/api/Branches"
+    }
+  },
+  {
+    "entity": "BranchReport",
+    "dto": "BranchReportDto",
+    "properties": [
+      "BranchId",
+      "BranchName",
+      "SalesCount",
+      "TotalAmount"
+    ],
+    "routes": {
+      "getById": "/api/Branches/{id}/report"
+    }
+  },
+  {
+    "entity": "UserRole",
+    "dto": "AssignRoleRequest",
+    "properties": [
+      "RoleId"
+    ],
+    "routes": {
+      "update": "/api/Users/{id}/roles"
+    }
+  },
+  {
+    "entity": "RolePermission",
+    "dto": "RolePermissionsDto",
+    "properties": [
+      "RoleId",
+      "Permissions"
+    ],
+    "routes": {
+      "update": "/api/Roles/{id}/permissions"
+    }
+  },
+  {
+    "entity": "AuthLogin",
+    "dto": "LoginRequest",
+    "properties": [
+      "Username",
+      "Password"
+    ],
+    "routes": {
+      "create": "/api/Auth/login"
+    }
+  },
+  {
+    "entity": "AuthRegister",
+    "dto": "RegisterRequest",
+    "properties": [
+      "Username",
+      "Password",
+      "Role"
+    ],
+    "routes": {
+      "create": "/api/Auth/register"
+    }
+  },
+  {
+    "entity": "NotificationRegister",
+    "dto": "RegisterDeviceDto",
+    "properties": [
+      "Token"
+    ],
+    "routes": {
+      "create": "/api/Notifications/register"
+    }
+  },
+  {
+    "entity": "NotificationCookingComplete",
+    "dto": null,
+    "properties": [],
+    "routes": {
+      "create": "/api/Notifications/cooking-complete"
+    }
+  },
+  {
+    "entity": "DashboardSummary",
+    "dto": null,
+    "properties": [],
+    "routes": {
+      "getAll": "/api/Dashboard/summary"
+    }
+  },
+  {
+    "entity": "Faq",
+    "dto": null,
+    "properties": [],
+    "routes": {
+      "getAll": "/api/Faq"
+    }
+  },
+  {
+    "entity": "TamaleType",
+    "dto": "TamaleTypeDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/TamaleTypes",
+      "getById": "/api/TamaleTypes/{id}",
+      "create": "/api/TamaleTypes",
+      "update": "/api/TamaleTypes/{id}",
+      "delete": "/api/TamaleTypes/{id}"
+    }
+  },
+  {
+    "entity": "Filling",
+    "dto": "FillingDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/Fillings",
+      "getById": "/api/Fillings/{id}",
+      "create": "/api/Fillings",
+      "update": "/api/Fillings/{id}",
+      "delete": "/api/Fillings/{id}"
+    }
+  },
+  {
+    "entity": "Wrapper",
+    "dto": "WrapperDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/Wrappers",
+      "getById": "/api/Wrappers/{id}",
+      "create": "/api/Wrappers",
+      "update": "/api/Wrappers/{id}",
+      "delete": "/api/Wrappers/{id}"
+    }
+  },
+  {
+    "entity": "SpiceLevel",
+    "dto": "SpiceLevelDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/SpiceLevels",
+      "getById": "/api/SpiceLevels/{id}",
+      "create": "/api/SpiceLevels",
+      "update": "/api/SpiceLevels/{id}",
+      "delete": "/api/SpiceLevels/{id}"
+    }
+  },
+  {
+    "entity": "BeverageType",
+    "dto": "BeverageTypeDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/BeverageTypes",
+      "getById": "/api/BeverageTypes/{id}",
+      "create": "/api/BeverageTypes",
+      "update": "/api/BeverageTypes/{id}",
+      "delete": "/api/BeverageTypes/{id}"
+    }
+  },
+  {
+    "entity": "BeverageSize",
+    "dto": "BeverageSizeDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/BeverageSizes",
+      "getById": "/api/BeverageSizes/{id}",
+      "create": "/api/BeverageSizes",
+      "update": "/api/BeverageSizes/{id}",
+      "delete": "/api/BeverageSizes/{id}"
+    }
+  },
+  {
+    "entity": "Sweetener",
+    "dto": "SweetenerDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/Sweeteners",
+      "getById": "/api/Sweeteners/{id}",
+      "create": "/api/Sweeteners",
+      "update": "/api/Sweeteners/{id}",
+      "delete": "/api/Sweeteners/{id}"
+    }
+  },
+  {
+    "entity": "Topping",
+    "dto": "ToppingDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/Toppings",
+      "getById": "/api/Toppings/{id}",
+      "create": "/api/Toppings",
+      "update": "/api/Toppings/{id}",
+      "delete": "/api/Toppings/{id}"
+    }
+  },
+  {
+    "entity": "User",
+    "dto": "UserDto",
+    "properties": [
+      "Id",
+      "FullName",
+      "Username",
+      "Email",
+      "Phone",
+      "Status",
+      "Branch",
+      "Shift",
+      "RoleId"
+    ],
+    "routes": {
+      "getAll": "/api/Users",
+      "getById": "/api/Users/{id}",
+      "create": "/api/Users",
+      "update": "/api/Users/{id}",
+      "delete": "/api/Users/{id}",
+      "changeStatus": "/api/Users/{id}/status"
+    }
+  },
+  {
+    "entity": "Role",
+    "dto": "RoleDto",
+    "properties": [
+      "Id",
+      "Name",
+      "Description",
+      "IsActive"
+    ],
+    "routes": {
+      "getAll": "/api/Roles",
+      "getById": "/api/Roles/{id}",
+      "create": "/api/Roles",
+      "update": "/api/Roles/{id}",
+      "delete": "/api/Roles/{id}"
+    }
+  },
+  {
+    "entity": "Module",
+    "dto": "ModuleDto",
+    "properties": [
+      "Id",
+      "Name"
+    ],
+    "routes": {
+      "getAll": "/api/Modules",
+      "getById": "/api/Modules/{id}",
+      "create": "/api/Modules",
+      "update": "/api/Modules/{id}",
+      "delete": "/api/Modules/{id}"
+    }
+  }
+]

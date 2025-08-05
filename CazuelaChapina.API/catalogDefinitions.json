@@ -1,0 +1,98 @@
+[
+  {
+    "entity": "TamaleType",
+    "dto": "TamaleTypeDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/TamaleTypes",
+      "getById": "/api/TamaleTypes/{id}",
+      "create": "/api/TamaleTypes",
+      "update": "/api/TamaleTypes/{id}",
+      "delete": "/api/TamaleTypes/{id}"
+    }
+  },
+  {
+    "entity": "Filling",
+    "dto": "FillingDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/Fillings",
+      "getById": "/api/Fillings/{id}",
+      "create": "/api/Fillings",
+      "update": "/api/Fillings/{id}",
+      "delete": "/api/Fillings/{id}"
+    }
+  },
+  {
+    "entity": "Wrapper",
+    "dto": "WrapperDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/Wrappers",
+      "getById": "/api/Wrappers/{id}",
+      "create": "/api/Wrappers",
+      "update": "/api/Wrappers/{id}",
+      "delete": "/api/Wrappers/{id}"
+    }
+  },
+  {
+    "entity": "SpiceLevel",
+    "dto": "SpiceLevelDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/SpiceLevels",
+      "getById": "/api/SpiceLevels/{id}",
+      "create": "/api/SpiceLevels",
+      "update": "/api/SpiceLevels/{id}",
+      "delete": "/api/SpiceLevels/{id}"
+    }
+  },
+  {
+    "entity": "BeverageType",
+    "dto": "BeverageTypeDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/BeverageTypes",
+      "getById": "/api/BeverageTypes/{id}",
+      "create": "/api/BeverageTypes",
+      "update": "/api/BeverageTypes/{id}",
+      "delete": "/api/BeverageTypes/{id}"
+    }
+  },
+  {
+    "entity": "BeverageSize",
+    "dto": "BeverageSizeDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/BeverageSizes",
+      "getById": "/api/BeverageSizes/{id}",
+      "create": "/api/BeverageSizes",
+      "update": "/api/BeverageSizes/{id}",
+      "delete": "/api/BeverageSizes/{id}"
+    }
+  },
+  {
+    "entity": "Sweetener",
+    "dto": "SweetenerDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/Sweeteners",
+      "getById": "/api/Sweeteners/{id}",
+      "create": "/api/Sweeteners",
+      "update": "/api/Sweeteners/{id}",
+      "delete": "/api/Sweeteners/{id}"
+    }
+  },
+  {
+    "entity": "Topping",
+    "dto": "ToppingDto",
+    "properties": ["Id", "Name"],
+    "routes": {
+      "getAll": "/api/Toppings",
+      "getById": "/api/Toppings/{id}",
+      "create": "/api/Toppings",
+      "update": "/api/Toppings/{id}",
+      "delete": "/api/Toppings/{id}"
+    }
+  }
+]

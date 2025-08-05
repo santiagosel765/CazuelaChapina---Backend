@@ -1,0 +1,21 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Visual Studio
+.vscode/
+.vs/
+*.dbmdl
+*.psess
+*.vsp
+*.pidb
+*.sln.docstates
+
+# Secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db
